@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+import { AuthRoute, ProtectedRoute } from './components/util/route_util'
+import {Switch, Route} from "react-router-dom";
+import Header from "./components/header/head_container"
+import Splash from "./components/splash/splash"
+import Login from "./components/session/login_form_container"
+import Signup from "./components/session/signup_form_container"
+import Home from "./components/home/home_container"
+//import './App.css';
+import "../src/stylesheets/index.css"
+import SignupForm from "./components/session/signup_form";
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Switch>
+        <AuthRoute path="/signup" component={Signup} />
+        <AuthRoute path="/login" component={Login} />
+        <Route path="/home" component={Home} ></Route>
+        <Route exact path="/" component={Splash}/>
+      </Switch>
     </div>
   );
 }
