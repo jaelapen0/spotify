@@ -16,6 +16,14 @@ const UserSchema = new Schema({
       type: String,
       required: true
    },
+   playlists: [{
+      type: Schema.Types.ObjectId,
+      ref: "Playlist"
+   }],
+   liked_songs: [{
+      type: Schema.Types.ObjectId,
+      ref: "Song"
+   }]
    
 }, {
    timestamps: true
