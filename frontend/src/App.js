@@ -6,6 +6,7 @@ import Splash from "./components/splash/splash"
 import Login from "./components/session/login_form_container"
 import Signup from "./components/session/signup_form_container"
 import Home from "./components/home/home_container"
+import Playlist from "./components/playlist/playlist_container"
 //import './App.css';
 import "../src/stylesheets/index.css"
 import SignupForm from "./components/session/signup_form";
@@ -16,7 +17,8 @@ const App = () => {
       <Switch>
         <AuthRoute path="/signup" component={Signup} />
         <AuthRoute path="/login" component={Login} />
-        <Route path="/home" component={Home} ></Route>
+        <Route path="/home" component={Home}></Route>
+        <Route path="/playlist" component={Playlist}></Route>
         <Route exact path="/" component={Splash}/>
       </Switch>
     </div>

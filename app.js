@@ -16,7 +16,9 @@ const connect = mongoose
    .then(() => console.log("Connected to MongoDB successfully"))
    .catch(err => console.log(err));
 
+//ROUTES
 const users = require("./routes/api/users");
+const playlists = require("./routes/api/playlists");
 
 if (process.env.NODE_ENV === 'production') {
    app.use(express.static('frontend/build'));
@@ -32,6 +34,9 @@ app.use(passport.initialize());
 require('./config/passport')(passport);
 
 app.use("/api/users", users);
+app.use("/api/playlists", playlists);
+
+
 
 const port = process.env.PORT || 5000;
 server.listen(port, () => console.log(`Server is running on port ${port}`));

@@ -13,28 +13,31 @@ const LoginForm = props => {
    }
    ;
    return (
-      <div>
+      <div className="login-div">
          <h3>Login</h3>
          <form onSubmit={e => props.processForm({email: state.email, password: state.password})}>
-            <label> email:
-               <input
+            <label className="login-email"> Email or username:</label>
+            <br/>
+               <input className="login-input"
                   type="text"
                   value={state.email}
+                  autoFocus
                   onChange={e => setState(prev => ({ ...prev, email: e.target.value}))}d
                >
                </input>
-            </label>
-
-            <label> Password:
-               <input
+            
+            <br/>
+            <label className="login-pass"> Password:</label>
+            <br />
+            <input className="login-input"
                   type="password"
                   value={state.password}
                   onChange={e => setState(prev => ({ ...prev, password: e.target.value }))}
                >
                </input>
-            </label>
-
-            <button onClick={e => props.processForm({ email: state.email, password: state.password })}></button>
+            
+            <br/>
+            <button className="login-button" onClick={e => props.processForm({ email: state.email, password: state.password })}>LOG IN</button>
          </form>
       </div>
    )

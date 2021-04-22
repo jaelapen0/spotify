@@ -9,7 +9,7 @@ const PlaylistSchema = new Schema({
    },
    songs: [{
       type: Schema.Types.ObjectId,
-      ref: "Artist"
+      ref: "Song"
    }],
    creator: {
       type: Schema.Types.ObjectId,

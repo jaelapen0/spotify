@@ -11,10 +11,10 @@ const SongSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: "Artist"
    },
-   album: {
-      type: Schema.Types.ObjectId,
-      ref: "Album"
-   },
+   // album: {
+   //    type: Schema.Types.ObjectId,
+   //    ref: "Album"
+   // },
    description: {
       type: String,
       required: true

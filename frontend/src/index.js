@@ -9,7 +9,7 @@ import jwt_decode from 'jwt-decode';
 import { setAuthToken, getUser } from './components/util/session_api_util';
 import { logout } from './components/actions/session_actions';
 import {login, signup} from "./components/util/session_api_util"
-
+import {getPlaylists} from "./components/util/playlist_util"
 document.addEventListener('DOMContentLoaded', () => {
   let store;
 
@@ -45,4 +45,5 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Root store={store} />, root);
   window.login = login;
   window.signup = signup;
+  window.getPlaylists = getPlaylists;
 })

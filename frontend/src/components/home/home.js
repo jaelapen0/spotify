@@ -16,7 +16,7 @@ const Home = props => {
             <img src="https://dynaimage.cdn.cnn.com/cnn/c_fill,g_auto,w_1200,h_675,ar_16:9/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200618210958-uk-rave-culture-2.jpg"></img>
          </div>
          <div className="home-inner">
-
+            <h2>Our Curated Playlists.</h2>
          </div>
          <div className="home-inner">
 

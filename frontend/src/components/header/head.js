@@ -4,7 +4,7 @@ const Header = ({ session, processForm, errors}) => {
    const [state, setState] = useState({})
 
 
-   debugger;
+   // debugger;
    return (
       <div className="header"> 
          <div className="header-left">

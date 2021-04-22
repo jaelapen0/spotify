@@ -1,0 +1,32 @@
+.login-div{
+   text-align: center;
+   margin: 0 auto;
+   width: 400px;
+}
+
+.login-email{
+   /* margin-left: -100px; */
+}
+
+.login-pass{
+   margin-left: -80px;
+}
+
+.login-input{
+   width: 200px;
+}
+
+.login-button{
+   background-color: green;
+   padding: 10px;
+   border-radius: 6px;
+   color: white;
+   width: 205px;
+   margin-top: 10px;
+   border: none;
+   font-weight: bolder;
+}
+
+.login-button:hover{
+   background-color: rgb(21, 176, 18);
+}

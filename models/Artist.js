@@ -11,10 +11,10 @@ const ArtistSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: "Song"
    }],
-   albums: [{
-      type: Schema.Types.ObjectId,
-      ref: "Album"
-   }],
+   // albums: [{
+   //    type: Schema.Types.ObjectId,
+   //    ref: "Album"
+   // }],
 
 }, {
    timestamps: true
