@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 import {getPlaylists} from "../util/playlist_util"
 import Playlist from "./playlist"
 const Playlists = (props) => {
-   debugger
+   // debugger
    const [state, setState] = useState({props})
    useEffect(()=> {
       getPlaylists().then(playlists=> {
-         debugger;
+         // debugger;
          setState(prev => ({ ...prev, playlists: playlists.data  }))
       })
    }, [])
